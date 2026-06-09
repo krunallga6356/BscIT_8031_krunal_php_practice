@@ -13,7 +13,6 @@
 
     ?>
 
-  
         <form method="get">
 
             Enter number of values: 
@@ -24,7 +23,6 @@
 
 
         <form method = "get">
-
             <?php
 
                 $n = $_GET['n'];
@@ -32,22 +30,17 @@
                 for ($i = 0; $i < $n; $i++) {
                     echo "Value " . ($i + 1) . "<input type='text' name='arr[]'><br><br>";
                 }
-
             ?>
-
                 <input type="submit" name="submit" value="Submit">
-
         </form>
 
         <?php
         
-
             $array = $_GET['arr'];
 
             foreach ($array as $ele) {
                 echo $ele . "<br>";
             }
-        
     ?>
 
 </body>
