@@ -6,14 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        $Names = array("Krunal","Vansh","Raj","B");
 
-        $Rev = array_reverse($Names);
+    <?php
+        error_reporting(0);
+    ?>
 
-        foreach($Rev as $Element){
-            echo $Element."<br>";
+
+        <form method="get">
+
+            Enter number of values: 
+            <input type="number" name="n" required>
+            <input type="submit" name="generate" value="Generate">
+            
+        </form>
+
+
+        <form method = "get">
+            <?php
+
+                $n = $_GET['n'];
+
+                for ($i = 0; $i < $n; $i++) {
+                    echo "Value " . ($i + 1) . "<input type='text' name='arr[]'><br><br>";
+                }
+
+            ?>
+
+                <input type="submit" name="submit" value="Submit">
+        </form>
+
+    <?php
+
+        $array = $_GET['arr'];
+
+        $array = array_reverse($array);
+
+        foreach ($array as $ele) {
+            echo $ele . "<br>";
         }
+
     ?>
 </body>
 </html>
