@@ -11,7 +11,6 @@
         error_reporting(0);
     ?>
 
-
         <form method="get">
 
             Enter number of values: 
@@ -29,9 +28,7 @@
                 for ($i = 0; $i < $n; $i++) {
                     echo "Value " . ($i + 1) . "<input type='text' name='arr[]'><br><br>";
                 }
-
             ?>
-
                 <input type="submit" name="submit" value="Submit">
         </form>
 
